@@ -1,0 +1,38 @@
+--- Query 1: 'title:file1' ---
+Risultati trovati: 1
+- file1.txt
+
+--- Query 2: 'title:cloud_computing' ---
+Risultati trovati: 1
+- cloud_computing.txt
+
+--- Query 3: 'title:int' ---
+Risultati trovati: 2
+- intelligenza_artificiale.txt
+- internet_delle_cose.txt
+
+--- Query 4: 'content:blockchain' ---
+Risultati trovati: 1
+- blockchain_e_criptovalute.txt
+
+--- Query 5: 'content: quantistico intelligenza mappe' ---
+Risultati trovati: 3
+- tecnologie_future.txt
+- automobili_autonome.txt
+- quantum_computing.txt
+
+--- Query 6: 'content: "IA" "mappe"' ---
+Risultati trovati: 1
+- automobili_autonome.txt
+
+--- Query 7: 'content: IA mappe' ---
+Risultati trovati: 2
+- automobili_autonome.txt
+- intelligenza_artificiale.txt
+
+--- Query 8: 'content:digitali Ai' ---
+Risultati trovati: 4
+- quantum_computing.txt
+- realtà_aumentata.txt
+- cybersicurezza.txt
+- automobili_autonome.txt

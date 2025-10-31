@@ -1,0 +1,1 @@
+Elasticsearch è un potente motore di ricerca.

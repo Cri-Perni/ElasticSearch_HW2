@@ -4,7 +4,7 @@ Applicazione Flask che indicizza file di testo in Elasticsearch e consente ricer
 
 ## Funzionalità principali
 
-- Indicizzazione automatica dei file `.txt` in `hw2/data` all’avvio
+- Indicizzazione automatica dei file `.txt` in `/data` all’avvio
 - Re‑indicizzazione manuale tramite endpoint `/reindex`
 - Ricerca per:
   - nome file (wildcard) — campo non analizzato (`keyword`)
@@ -55,12 +55,12 @@ pip install Flask elasticsearch requests
 1) Avvia Elasticsearch (deve rispondere su `http://localhost:9200`).
 2) Avvia l’app Flask:
 ```powershell
-python .\hw2\app.py
+python .\app.py
 ```
 All’avvio:
 - verifica la connessione a Elasticsearch
 - crea l’indice se non esiste
-- indicizza i file in `hw2/data`
+- indicizza i file in `/data`
 - stampa a log il tempo di indicizzazione
 
 Applicazione in ascolto su `http://localhost:5000`.
@@ -98,17 +98,12 @@ curl -X POST http://localhost:5000/reindex
 
 ## Script di test
 
-- `hw2/test_queries.py` invia una serie di query predefinite a `http://localhost:5000/search` e stampa i risultati.
+- `test_queries.py` invia una serie di query predefinite a `http://localhost:5000/search` e stampa i risultati.
 - Esecuzione (con app già avviata):
 ```powershell
-python .\hw2\test_queries.py
+python .\test_queries.py
 ```
-- Risultati di riferimento: `hw2/test_result.txt`
-
-## Tempi di indicizzazione
-
-- Il tempo è misurato in `app.py` attorno a `indexer.index_directory()` e stampato a log.
-- Con 12 file piccoli il tempo è tipicamente nell’ordine di frazioni di secondo su macchina locale.
+- Risultati di riferimento: `test_result.txt`
 
 ## Troubleshooting
 
@@ -117,5 +112,5 @@ python .\hw2\test_queries.py
   - Controlla eventuali credenziali/SSL; il client è configurato con header di compatibilità 8.x
 - Nessun risultato dalle query
   - Controlla che l’indice esista e che l’indicizzazione sia stata eseguita (`/reindex`)
-  - Verifica i contenuti dei file in `hw2/data`
+  - Verifica i contenuti dei file in `data`
 
